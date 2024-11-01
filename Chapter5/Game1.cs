@@ -131,6 +131,8 @@ namespace Chapter5
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            // use hidef profile for shader model 3.0
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
         }
 
         /// <summary>
@@ -244,8 +246,8 @@ namespace Chapter5
         /// <param name="vertexData">Array of vertices.</param>
         /// <param name="numPrimitives">Total primitives drawn.</param>
         private void TextureShader(PrimitiveType primitiveType,
-                           VertexPositionColorTexture[] vertexData,
-                           int numPrimitives)
+                                   VertexPositionColorTexture[] vertexData,
+                                   int numPrimitives)
         {
             // begin using Texture.fx
             textureEffect.CurrentTechnique.Passes[0].Apply();
@@ -253,7 +255,7 @@ namespace Chapter5
             // set drawing format and vertex data then draw surface
             graphics.GraphicsDevice.SetVertexBuffer(null);
             graphics.GraphicsDevice.DrawUserPrimitives<VertexPositionColorTexture>(
-                                        primitiveType, vertexData, 0, numPrimitives);
+                                                primitiveType, vertexData, 0, numPrimitives);
         }
 
         /// <summary>
