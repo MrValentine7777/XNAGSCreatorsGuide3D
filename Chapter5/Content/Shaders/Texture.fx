@@ -27,7 +27,7 @@ struct VSinput
 // vertex shader output
 struct VStoPS
 {
-	// vertex shader output
+    // vertex shader output
     float4 position : POSITION0; // position semantic x,y,z,w
     float4 color : COLOR; // color semantic r,g,b,a
     float2 uv : TEXCOORD0; // texture semantic u,v
@@ -43,8 +43,8 @@ struct PSoutput
 void VertexShader1(in VSinput IN, out VStoPS OUT)
 {
     OUT.position = mul(IN.position, wvpMatrix); // transform object
-	
-	// orient it in camera
+    
+    // orient it in camera
     OUT.color = IN.color; // send color to p.s.
     OUT.uv = IN.uv; // send uv's to p.s.
 }
@@ -52,12 +52,12 @@ void VertexShader1(in VSinput IN, out VStoPS OUT)
 // convert color and texture data from vertex shader to pixels
 void PixelShader1(in VStoPS IN, out PSoutput OUT)
 {
-	// use texture for coloring object
+    // use texture for coloring object
     OUT.color = tex2D(textureSampler, IN.uv);
-	
-	// this next line is optional – you can shade the texturized pixel
-	// with color to give your textures a tint. Do this by multiplying
-	// output by the input color vector.
+    
+    // this next line is optional – you can shade the texturized pixel
+    // with color to give your textures a tint. Do this by multiplying
+    // output by the input color vector.
     OUT.color *= IN.color;
 }
 
@@ -66,7 +66,7 @@ technique TextureShader
 {
     pass p0
     {
-		// declare and initialize vs and ps
+        // declare and initialize vs and ps
         vertexshader = compile vs_5_0 VertexShader1();
         pixelshader = compile ps_5_0 PixelShader1();
     }
