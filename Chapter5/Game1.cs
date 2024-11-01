@@ -157,6 +157,11 @@ namespace Chapter5
             );
             //positionColor = new VertexDeclaration(graphics.GraphicsDevice,
             //                              VertexPositionColor.VertexElements);
+            // load PositionColor.fx and set global params
+            positionColorEffect = Content.Load<Effect>("Shaders\\PositionColor");
+            positionColorEffectWVP = positionColorEffect.Parameters["wvpMatrix"];
+
+
             positionColorTexture = new VertexDeclaration(
                 new VertexElement(0, VertexElementFormat.Vector3, VertexElementUsage.Position, 0),
                 new VertexElement(12, VertexElementFormat.Color, VertexElementUsage.Color, 0),
@@ -165,9 +170,7 @@ namespace Chapter5
             //positionColorTexture = new VertexDeclaration(graphics.GraphicsDevice,
             //                              VertexPositionColorTexture.VertexElements);
 
-            // load PositionColor.fx and set global params
-            positionColorEffect = Content.Load<Effect>("Shaders\\PositionColor");
-            positionColorEffectWVP = positionColorEffect.Parameters["wvpMatrix"];
+
 
             // load Texture.fx and set global params
             textureEffect = Content.Load<Effect>("Shaders\\Texture");
