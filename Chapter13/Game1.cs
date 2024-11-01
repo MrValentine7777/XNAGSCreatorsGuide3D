@@ -9,6 +9,7 @@ namespace Chapter13
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
+        private SpriteFont Gamefont;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
