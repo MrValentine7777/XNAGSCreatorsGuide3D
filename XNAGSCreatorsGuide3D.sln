@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XNAGSCreatorsGuide3D", "XNAGSCreatorsGuide3D\XNAGSCreatorsGuide3D.csproj", "{CFFB7AD3-0C75-4B73-A69B-727B800A99CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XNAGSCreatorsGuide3D", "XNAGSCreatorsGuide3D\XNAGSCreatorsGuide3D.csproj", "{CFFB7AD3-0C75-4B73-A69B-727B800A99CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter5", "Chapter5\Chapter5.csproj", "{65117B10-F0E0-4019-B7CD-FAF445EDCE87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter5", "Chapter5\Chapter5.csproj", "{65117B10-F0E0-4019-B7CD-FAF445EDCE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter13", "Chapter13\Chapter13.csproj", "{6EB68BCA-D6C8-412E-ABE8-E620CB160924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{65117B10-F0E0-4019-B7CD-FAF445EDCE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65117B10-F0E0-4019-B7CD-FAF445EDCE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65117B10-F0E0-4019-B7CD-FAF445EDCE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB68BCA-D6C8-412E-ABE8-E620CB160924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB68BCA-D6C8-412E-ABE8-E620CB160924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB68BCA-D6C8-412E-ABE8-E620CB160924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB68BCA-D6C8-412E-ABE8-E620CB160924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
